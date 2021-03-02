@@ -9,213 +9,368 @@
   </head>
   <body>
     <main class="container">
-      <header class="header">
-        <h1 id="title" class="text-center">freeCodeCamp Survey Form</h1>
-        <p id="description" class="description text-center">
-          Thank you for taking the time to help us improve the platform
+      <header>
+        <h1 id="title">Yearly University Survey Form For Students</h1>
+        <p id="description">
+          this will help us to make our university a better place
         </p>
       </header>
-      <form id="survey-form">
-        <div id="form-group">
-          <label for="name" id="name-label">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            class="form-control"
-            placeholder="Enter your name"
-            required
-          />
-        </div>
+      <nav>
+        <section class="content">
+          <article class="info">
+            <h2 id="title">General Information</h2>
+            <aside class="inputs">
+              <div class="name">
+                <label for="name">Full name</label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Enter your full name"
+                  required
+                />
+              </div>
+              <div class="date">
+                <label for="date">Date</label>
+                <input type="date" id="date" required />
+              </div>
 
-        <div id="form-group">
-          <label for="email" id="email-label">Email</label>
-          <input
-            type="text"
-            id="email"
-            name="email"
-            class="form-control"
-            placeholder="Enter your email"
-            required
-          />
-        </div>
+              <div class="email">
+                <label for="email">Email</label>
+                <input type="Email" placeholder="Enter your email" required />
+              </div>
+            </aside>
+          </article>
+          <section class="c_ques">
+            <h2 id="b_title">Survey Questions</h2>
+            <article class="inputs">
+              <aside class="ques1">
+                <h3 class="slv">
+                  <!-- &nbsp; (Non-breaking space) – Không gian không bị phá hủy. -->
+                  <span>&nbsp;-</span>
+                  What do you think about Curriculum and classes for the term ?
+                </h3>
+                <div class="table">
+                  <table>
+                    <tr>
+                      <td></td>
+                      <!-- Phần thân của cột 1 hàng 1 -->
 
-        <div id="form-group">
-          <label for="number" id="number-label"
-            >Age<span class="clue">(optional)</span></label
-          >
-          <input
-            type="number"
-            id="number"
-            name="age"
-            class="form-control"
-            placeholder="Age"
-            min="10"
-            max="99"
-          />
-        </div>
+                      <th>Strongly Disagree</th>
+                      <!-- Phần tiều đề của hàng 1 cột 2 -->
+                      <th>Disagree</th>
+                      <!-- Phần tiều đề của hàng 1 cột 3 -->
+                      <th>Neutral</th>
+                      <th>Agree</th>
+                      <th>Strongly Agree</th>
+                    </tr>
 
-        <div class="form-group">
-          <p>Which option best describes your current role?</p>
-          <select  id="dropdown" name="role" class="form-control" required>
-            <option disabled selected value>Select current role</option>
-            <option value="student">Student</option>
-            <option value="job">Full Time Job</option>
-            <option value="learner">Full Time Learner</option>
-            <option value="preferNo">Prefer not to say</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
+                    <tr>
+                      <th>
+                        The class descriptions accurately described the content.
+                      </th>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="one" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="one" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="one" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="one" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="one" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>I was academically prepared for the classes.</th>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="two" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="two" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="two" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="two" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="two" />
+                        </div>
+                      </td>
+                    </tr>
 
-        <div class="form-group">
-          <p>Would you recommend freeCodeCamp to a friend?</p>
-          <label for="">
-            <input
-              name="user-recommend"
-              value="definitely"
-              type="radio"
-              class="input-radio"
-              checked
-            />Definitely
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="user-recommend"
-              value="maybe"
-              class="input-radio"
-            />
-            Maybe
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="user-recommend"
-              value="not-sure"
-              class="input-radio"
-            />
-            Not sure
-          </label>
-        </div>
-        <div class="form-group">
-          <p>What is your favorite feature of freeCodeCamp?</p>
-          <select name="mostLike" id="most-like" class="form-control" required>
-            <option disabled selected value>Select an option</option>
-            <option value="challenges">Challenges</option>
-            <option value="projects">Projects</option>
-            <option value="community">Community</option>
-            <option value="openSource">Open Source</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <p>
-            What would you like to see improved?
-            <span class="clue">(Check all that apply)</span>
-          </p>
-          <label>
-            <input
-              type="checkbox"
-              name="prefer"
-              class="input-checkbox"
-              value="front-end-projects"
-            />Front-end Projects
-          </label>
-          <label>
-            <input
-              name="prefer"
-              value="back-end-projects"
-              type="checkbox"
-              class="input-checkbox"
-            />Back-end Projects</label
-          >
-          <label
-            ><input
-              name="prefer"
-              value="data-visualization"
-              type="checkbox"
-              class="input-checkbox"
-            />Data Visualization</label
-          >
-          <label
-            ><input
-              name="prefer"
-              value="challenges"
-              type="checkbox"
-              class="input-checkbox"
-            />Challenges</label
-          >
-          <label
-            ><input
-              name="prefer"
-              value="open-source-community"
-              type="checkbox"
-              class="input-checkbox"
-            />Open Source Community</label
-          >
-          <label
-            ><input
-              name="prefer"
-              value="gitter-help-rooms"
-              type="checkbox"
-              class="input-checkbox"
-            />Gitter help rooms</label
-          >
-          <label
-            ><input
-              name="prefer"
-              value="videos"
-              type="checkbox"
-              class="input-checkbox"
-            />Videos</label
-          >
-          <label
-            ><input
-              name="prefer"
-              value="city-meetups"
-              type="checkbox"
-              class="input-checkbox"
-            />City Meetups</label
-          >
-          <label
-            ><input
-              name="prefer"
-              value="wiki"
-              type="checkbox"
-              class="input-checkbox"
-            />Wiki</label
-          >
-          <label
-            ><input
-              name="prefer"
-              value="forum"
-              type="checkbox"
-              class="input-checkbox"
-            />Forum</label
-          >
-          <label
-            ><input
-              name="prefer"
-              value="additional-courses"
-              type="checkbox"
-              class="input-checkbox"
-            />Additional Courses</label
-          >
-        </div>
-        <div class="form-group">
-          <p>Any comments or suggestions?</p>
-          <textarea
-            name="comment"
-            id="comments"
-            placeholder="Enter comment your here"
-            class="input-textarea"
-          ></textarea>
-        </div>
-        <div class="form-group">
-          <button type="submit" id="submit" class="submit-button">
-            Submit
-          </button>
-        </div>
-      </form>
+                    <tr>
+                      <th>The class sizes were appropriate.</th>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="three" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="three" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="three" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="three" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="three" />
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th>The classes started and ended on time.</th>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="four" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="four" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="four" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="four" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="four" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        The classes increased my knowledge of the subject
+                        matter.
+                      </th>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="five" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="five" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="five" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="five" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="five" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>The overall quality of the classes was excellent.</th>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="six" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="six" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="six" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="six" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="six" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        I would recommend these classes to other students.
+                      </th>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="seven" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="seven" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="seven" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="seven" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="radio">
+                          <input type="radio" name="seven" />
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </aside>
+
+              <div class="ques2">
+                <div class="section_1">
+                  <h3>
+                    <span>&nbsp; -</span> How long you been a student here
+                  </h3>
+                  <div class="option">
+                    <select id="selection">
+                      <option selected required>Select option</option>
+                      <option value="1 Years">1 Year</option>
+                      <option value="2 Years">2 Year</option>
+                      <option value="3 Years">3 Year</option>
+                      <option value="More Than 3 Years">
+                        More Than 3 Years
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="section_2">
+                  <h3>
+                    <span>&nbsp; -</span> How long you been a student here
+                  </h3>
+                  <div class="option">
+                    <select id="selection" id="dropdown">
+                      <option selected required>Select Level</option>
+                      <option value="1st">1st</option>
+                      <option value="2nd">2nd</option>
+                      <option value="3rd">3rd</option>
+                      <option value="More Than 3rd">More Than 3rd</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="ques3">
+                <h3>
+                  <span> &nbsp; -</span> Would you recommend our University ?
+                </h3>
+                <div class="radio">
+                  <label for="Definitely"
+                    ><input type="radio" name="recommend" />&nbsp;
+                    Definitely</label
+                  >
+                  <label for="Maybe"
+                    ><input type="radio" name="recommend" /> &nbsp; Maybe</label
+                  >
+                  <label for="Not_Sure"
+                    ><input type="radio" name="recommend" /> &nbsp; Not
+                    Sure</label
+                  >
+                </div>
+              </div>
+
+              <div class="ques4">
+                <h3>
+                  <span> &nbsp; -</span> What would you like to see improved ?
+                </h3>
+                <div class="checkbox">
+                  <label for="Materials"
+                    ><input type="checkbox" name="Materials" />&nbsp;
+                    Materials</label
+                  >
+                  <label for="Instruction"
+                    ><input type="checkbox" value="Instruction" /> &nbsp;
+                    Instruction</label
+                  >
+                  <label for="School_environment"
+                    ><input type="checkbox" value="School_environment" /> &nbsp;
+                    School environment</label
+                  >
+                  <label for="Classes"
+                    ><input type="checkbox" value="Classes" /> &nbsp; Classes of
+                    Term</label
+                  >
+                </div>
+              </div>
+
+              <div class="ques5">
+                <h3><span> &nbsp; -</span> Any comments or suggestions?</h3>
+                <div class="text-area">
+                  <textarea
+                    name="suggestions"
+                    id=""
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="btn-submit">
+                <button type="submit" id="submit" class="submit-button">
+                  <span>Submit </span>
+                </button>
+              </div>
+            </article>
+          </section>
+        </section>
+      </nav>
+      <footer class="foot">Project Survey Form By HungSmeb.</footer>
     </main>
   </body>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </html>
