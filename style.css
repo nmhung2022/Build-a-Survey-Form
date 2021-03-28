@@ -1,53 +1,41 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
 :root {
   --color-white: #f3f3f3;
   --color-darkblue: #1b1b32;
-  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
-  --color-green: #37af65;
+  --color-purple: #620085;
+  --color-yellow: #f3f3f3;
+  --color-red: #FF0000;
+  --color-cyan: #00ffea;
 }
 
+*,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  /* font-family: 'Comfortaa', 'Roboto', Courier; */
+  font-family: 'Share Tech Mono', monospace;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.4;
-  color: var(--color-white);
+  color: var(--color-purple);
   margin: 0;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  background: var(--color-darkblue);
-  background-image: linear-gradient(
-      115deg,
-      rgba(58, 58, 158, 0.8),
-      rgb(136, 136, 206, 0.7)
-    ),
-    url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 h1 {
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.5;
+  font-size: 2rem;
+  background-color: #42a9a8;
+  color: var(--color-white);
+  text-align: center;
 }
 
 p {
-  font-size: 1.125em;
+  font-size: 1.125rem;
 }
+
 
 h1,
 p {
@@ -55,20 +43,32 @@ p {
   margin-bottom: 0.5rem;
 }
 
-label {
-  display: flex;
-  align-items: center;
-  font-size: 1.125rem;
-  margin-bottom: 0.5rem;
-}
 
 input,
 button,
-textarea,
-select {
+textarea {
   margin: 0;
+  font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+
+.input-text {
+  display: inline-block;
+  margin-left: 3rem;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  margin: 1.5rem;
+}
+
+.form-group .score {
+  margin-top: -0.3rem;
 }
 
 button {
@@ -77,7 +77,24 @@ button {
 
 .container {
   width: 100%;
-  margin: 3.125em auto 0 auto;
+  margin: 3.125rem auto 3.125rem auto;
+}
+
+.form-group .number-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  color: #42a9a8;
+  font-size: 1rem;
+  border: 3px solid #42a9a8;
+  display: inline-block;
+
+}
+
+.form-group p {
+  display: inline;
+  padding-left: 3px;
 }
 
 @media (min-width: 567px) {
@@ -85,28 +102,49 @@ button {
     max-width: 540px;
   }
 }
-/*Ipad dọc(768 x 1024)*/
+
+
 @media (min-width: 768px) {
+
+  /* rules here apply to devices from from 768px to 991px (inclusive) */
   .container {
     max-width: 720px;
   }
 }
 
+@media (min-width: 992px) {
+
+  /* rules here apply to devices from 992px to 1199px (inclusive) */
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  /* rules here apply to devices 1200px and greater */
+  .container {
+    max-width: 1044px;
+  }
+}
+
 .header {
-  padding: 0, 0.625rem;
+  padding: 0 0.625rem;
   margin-bottom: 1.875rem;
 }
 
 .description {
   font-style: italic;
+  color: var(--color-white);
   font-weight: 200;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
 
+
 .clue {
   margin-left: 0.25rem;
   font-size: 0.9rem;
-  color: #e4e4e4;
+  color: var(--color-purple);
 }
 
 .text-center {
@@ -114,61 +152,86 @@ button {
 }
 
 form {
-    background: var(--color-darkblue-alpha);
-    padding: 2.5rem 0.625rem;
-    border-radius: 0.25rem;
-}
-
-@media (min-width: 480px) {
-    form {
-        padding: 2.5rem;
-    }
+  background: var(--color-yellow);
+  padding: 2.5rem 0.625rem;
+  box-shadow: 10px 20px;
 }
 
 .form-group {
-    margin: 0 auto 1.25rem auto;
-    padding: 0.25rem;
+  margin: 0 auto 1.25rem auto;
+  padding: 0.1rem;
 }
 
 .form-control {
-    display: block;
-    width: 100%;
-    height: 2.375rem;
-    padding: 0.375rem 0.75rem;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: block;
+  width: 100%;
+  height: 4rem;
+  padding: 0.375rem 0.75rem;
+  background: var(--color-white);
+  border: 2px solid var(--color-red);
+  box-sizing: border-box;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control1 {
+  display: block;
+  width: 7%;
+  height: 2rem;
+  padding: 0.4 rem 0.2rem;
+  background: var(--color-white);
+  border: 2px solid var(--color-red);
+  box-sizing: border-box;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .form-control:focus {
-    border: #80dbff;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgb(0, 123, 255, 0.25);
+  border: 2px solid var(--color-cyan);
+  outline: 0;
+  box-shadow: 5px 10px var(--color-darkblue);
 }
 
-.input-radio, .input-checkbox {
-    display: inline-block;
-    margin-right: 0.625rem;
-    min-height: 1.25rem;
-    min-width: 1.25rem;
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
 }
 
 .input-textarea {
-    min-height: 120px;
-    width: 100%;
-    padding: 0.625rem;
-    resize: vertical;
+  border: 2px solid var(--color-red);
+  min-height: 120px;
+  width: 100%;
+  padding: 0.625rem;
+  resize: vertical;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.input-textarea:focus {
+  border: 2px solid var(--color-cyan);
+  outline: 0;
+  box-shadow: 5px 10px var(--color-darkblue);
 }
 
 .submit-button {
-    display: block;
-    width: 100%;
-    padding: 0.75rem;
-    background: var(--color-green);
-    color: inherit;
-    border-radius: 2px;
-    cursor: pointer;
+  display: block;
+  width: 40%;
+  height: 80%;
+  padding: 0.75rem;
+  background-color: #F3A400;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  margin: auto;
 }
+
+
+.submit-button:hover {
+  border: 2px solid var(--color-cyan);
+  box-shadow: 5px 10px var(--color-darkblue);
+}
+
